@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2024 perillamint <perillamint@silicon.moe>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[workspace]
+resolver = "2"
+
+members = [
+    "portalgun",
+]
