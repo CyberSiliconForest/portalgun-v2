@@ -11,4 +11,8 @@ license = "agpl-3.0-or-later"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-
+tokio = { version = "^1.36.0", features = ["full"] }
+hyper = { version = "^1.1.0", features = ["full"] }
+hyper-rustls = { version = "0.26.0" }
+anyhow = "^1.0.79"
+thiserror = "^1.0.56"
