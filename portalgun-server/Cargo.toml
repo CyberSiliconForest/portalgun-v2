@@ -18,7 +18,7 @@ url = "^2.5.0"
 serde = { version = "^1.0.196", features = ["derive"] }
 tokio = { version = "^1.36.0", features = ["full"] }
 tokio-stream = "^0.1.14"
-axum = "^0.7.4"
+axum = "^0.6.20" # TODO: Upgrade to 0.7 after this: https://github.com/hyperium/tonic/pull/1595
 tonic = "^0.11.0"
 prost = "^0.12.3"
 tower = { version = "^0.4.13", features = ["steer"] }

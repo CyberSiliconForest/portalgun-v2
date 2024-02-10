@@ -53,8 +53,7 @@ async fn main() -> anyhow::Result<()> {
         .route(
             "/api/v1/heartbeat",
             get(|| async { "Project Kaguya up and running." }),
-        )
-        .into();
+        );
 
     let hybrid_svc = Steer::new(
         vec![grpc_router, axum_router],
@@ -68,9 +67,12 @@ async fn main() -> anyhow::Result<()> {
         },
     );
 
-    let listener = TcpListener::bind("0.0.0.0:3000").await?;
+    let listen: std::net::SocketAddrV4 = "0.0.0.0:3000".parse().unwrap();
 
-    axum::serve(listener, tower::make::Shared::new(hybrid_svc)).await?;
+    axum::Server::bind(&listen.into())
+        .serve(tower::make::Shared::new(hybrid_svc))
+        .await
+        .unwrap();
 
     Ok(())
 }
