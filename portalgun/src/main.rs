@@ -16,7 +16,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+#[tokio::main(flavor = "multi_thread")]
 
-fn main() {
+async fn main() -> anyhow::Result<()> {
     println!("Hello, world!");
+
+    Ok(())
 }

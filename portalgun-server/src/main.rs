@@ -17,6 +17,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-fn main() {
+#[tokio::main(flavor = "multi_thread")]
+async fn main() -> anyhow::Result<()> {
     println!("Hello, world!");
+
+    Ok(())
 }

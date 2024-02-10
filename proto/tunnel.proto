@@ -1,0 +1,10 @@
+// SPDX-FileCopyrightText: 2024 perillamint
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+syntax = "proto3";
+
+package moe.silicon.tunnel;
+
+import "healthcheck.proto";
+
